@@ -2,11 +2,21 @@ package Homework;
 
 public class HW5 {
 
+
+
     public static void verifyEquals(int expectedResult, int actualResult) {
         if (expectedResult == actualResult) {
             System.out.println("PASS");
         } else {
             System.out.println("FAIL");
+        }
+
+    }
+    public static String verifyEquals(String expectedResult, String actualResult) {
+        if (expectedResult == actualResult) {
+            return "PASS";
+        } else {
+            return "FAIL";
         }
 
     }
@@ -40,10 +50,20 @@ public class HW5 {
     }
 
 
+
     public static void main(String[] args) {
 
-        System.out.println(returnDayOfWeek(5));
 
+        String expectedResult = "Воскресенье";
+        String actualResult = returnDayOfWeek(7);
+
+        System.out.println(verifyEquals(expectedResult,actualResult));
+
+
+        expectedResult = "Error";
+        actualResult = returnDayOfWeek(0);
+
+        System.out.println(verifyEquals(expectedResult,actualResult));
     }
 
 
