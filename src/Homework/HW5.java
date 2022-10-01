@@ -4,15 +4,15 @@ public class HW5 {
 
 
 
-    public static void verifyEquals(int expectedResult, int actualResult) {
-        if (expectedResult == actualResult) {
-            System.out.println("PASS");
-        } else {
-            System.out.println("FAIL");
-        }
-
-    }
-    public static String verifyEquals(String expectedResult, String actualResult) {
+//    public static verify(int expectedResult, int actualResult) {
+//        if (expectedResult == actualResult) {
+//            System.out.println("PASS");
+//        } else {
+//            System.out.println("FAIL");
+//        }
+//
+//    }
+    public static String verify (String expectedResult, String actualResult) {
         if (expectedResult == actualResult) {
             return "PASS";
         } else {
@@ -53,18 +53,59 @@ public class HW5 {
 
     public static void main(String[] args) {
 
+        int namber = 1;
+String line =  "_________________________________________________________________________________________________________";
+String task = "Задание " + namber;
 
+
+
+        System.out.println(task + '\n');
+        namber++;
         String expectedResult = "Воскресенье";
         String actualResult = returnDayOfWeek(7);
 
-        System.out.println(verifyEquals(expectedResult,actualResult));
+        System.out.println(verify(expectedResult,actualResult));
 
 
         expectedResult = "Error";
-        actualResult = returnDayOfWeek(0);
+        actualResult = returnDayOfWeek(8);
 
-        System.out.println(verifyEquals(expectedResult,actualResult));
+        System.out.println(verify(expectedResult,actualResult));
+
+        expectedResult = "Понедельник";
+        actualResult = returnDayOfWeek(1);
+
+        System.out.println(verify(expectedResult,actualResult));
+
+        expectedResult = "Вторник";
+        actualResult = returnDayOfWeek(2);
+
+        System.out.println(verify(expectedResult,actualResult));
+
+
+        expectedResult = "Среда";
+        actualResult = returnDayOfWeek(3);
+
+        System.out.println(verify(expectedResult,actualResult));
+
+        expectedResult = "Четверг";
+        actualResult = returnDayOfWeek(4);
+
+        System.out.println(verify(expectedResult,actualResult));
+
+        expectedResult = "Пятница";
+        actualResult = returnDayOfWeek(5);
+
+        System.out.println(verify(expectedResult,actualResult));
+
+        expectedResult = "Суббота";
+        actualResult = returnDayOfWeek(6);
+
+        System.out.println(verify(expectedResult,actualResult));
+
+        System.out.println(line);
     }
+
 
 
 }
